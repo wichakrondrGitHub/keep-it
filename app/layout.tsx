@@ -14,10 +14,18 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
+  keywords: ["nextjs", "nextjs13", "next13", "pwa", "next-pwa"],
   description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: [
+    { rel: "apple-touch-icon", url: "icons/icon-128x128.png" },
+    { rel: "icon", url: "icons/icon-128x128.png" },
+  ],
+  authors: [
+    { name: "Dear" },
+    {
+      name: "Dear",
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -38,7 +46,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
